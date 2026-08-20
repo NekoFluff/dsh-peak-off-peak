@@ -21,7 +21,8 @@
     },
     "client": {
       "platform": "web",
-      "inject": ["slots"]
+      "inject": ["slots"],
+      "external": ["react", "@deepseek-ai/dsh-client-ui-primitives"]
     }
   },
   "license": "MIT"
