@@ -1,0 +1,12 @@
+# dsh-peak-off-peak bundle patch.
+#
+# This is the configuration layer applied when a profile lists this bundle.
+# It inserts one plugin row; the row's `name` must match the package name so
+# Node resolution finds the installed code (see package.json `dsh.bundle`).
+#
+# The row loads the package's node half (index.js). Because package.json also
+# declares `dsh.client`, the client-modules host scans this row and serves the
+# browser half (client.js), which registers the sidebar badge.
+- insert:
+    - id: peak-off-peak
+      name: dsh-peak-off-peak

@@ -1,0 +1,28 @@
+{
+  "name": "dsh-peak-off-peak",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness sidebar badge showing whether DeepSeek API is currently in peak or off-peak hours",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": ["slots"]
+    }
+  },
+  "license": "MIT"
+}
